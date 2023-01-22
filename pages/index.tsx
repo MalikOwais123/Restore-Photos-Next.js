@@ -18,7 +18,7 @@ const Home: NextPage = () => {
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-28 mt-20">
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-slate-900 sm:text-7xl">
           Restoring old photos{" "}
-          <span className="relative whitespace-nowrap text-[#3290EE]">
+          <span className="relative whitespace-nowrap text-[#EDB129]">
             <SquigglyLines />
             <span className="relative">using AI</span>
           </span>{" "}
@@ -42,8 +42,8 @@ const Home: NextPage = () => {
                 <h2 className="mb-1 font-medium text-lg">Original Photo</h2>
                 <Image
                   alt="Original photo of my bro"
-                  src="/michael.jpg"
-                  className="w-96 h-96 rounded-2xl"
+                  src="/blurBefore.jpeg"
+                  className="w-90 h-102 rounded-2xl"
                   width={400}
                   height={400}
                 />
@@ -52,10 +52,10 @@ const Home: NextPage = () => {
                 <h2 className="mb-1 font-medium text-lg">Restored Photo</h2>
                 <Image
                   alt="Restored photo of my bro"
+                  src="/blurAfter.jpeg"
+                  className="w-90 h-102 rounded-2xl sm:mt-0 mt-2"
                   width={400}
                   height={400}
-                  src="/michael-new.jpg"
-                  className="w-96 h-96 rounded-2xl sm:mt-0 mt-2"
                 />
               </div>
             </div>

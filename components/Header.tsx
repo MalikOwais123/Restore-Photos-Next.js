@@ -7,14 +7,16 @@ export default function Header() {
       <Link href="/" className="flex space-x-2">
         <Image
           alt="header text"
-          src="/imageIcon.png"
-          className="sm:w-14 sm:h-14 w-9 h-9"
+          src="/imageIcon2.jpeg"
+          // src="/gallery_icon.png"
+          className="sm:w-18 sm:h-18 w-16 h-16"
           width={36}
           height={36}
         />
-        <h1 className="sm:text-5xl text-3xl font-bold ml-2 tracking-tight">
+        <h1 className="sm:text-5xl text-3xl font-bold ml-2 tracking-tight flex justify-center items-center">
           Recovered Moments
         </h1>
+        
       </Link>
     </header>
   );

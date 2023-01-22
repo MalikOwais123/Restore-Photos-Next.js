@@ -22,6 +22,7 @@ export default async function handler(
   req: ExtendedNextApiRequest,
   res: NextApiResponse<Data>
 ) {
+  console.log("SERVERLESS FUNCTION EXECUTION");
   // Rate Limiter Code
   if (ratelimit) {
     const identifier = requestIp.getClientIp(req);

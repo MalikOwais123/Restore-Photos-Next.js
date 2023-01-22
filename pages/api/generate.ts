@@ -22,8 +22,7 @@ export default async function handler(
   req: ExtendedNextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  console.log("SERVERLESS FUNCTION EXECUTION");
-  // Rate Limiter Code
+  // * Rate Limiter Code
   if (ratelimit) {
     const identifier = requestIp.getClientIp(req);
     const result = await ratelimit.limit(identifier!);
@@ -41,7 +40,7 @@ export default async function handler(
   }
 
   const imageUrl = req.body.imageUrl;
-  // POST request to Replicate to start the image restoration generation process
+  // * POST request to Replicate to start the image restoration generation process
   let startResponse = await fetch("https://api.replicate.com/v1/predictions", {
     method: "POST",
     headers: {
@@ -55,17 +54,13 @@ export default async function handler(
     }),
   });
 
-  console.log("REPLICATE_API_KEY", process.env.REPLICATE_API_KEY);
-
   let jsonStartResponse = await startResponse.json();
   let endpointUrl = jsonStartResponse.urls.get;
 
-  // GET request to get the status of the image restoration process & return the result when it's ready
+  // * GET request to get the status of the image restoration process & return the result when it's ready
   let restoredImage: string | null = null;
   while (!restoredImage) {
-    // Loop in 1s intervals until the alt text is ready
-    console.log("polling for result...");
-    console.log("process.env.REPLICATE_API_KEY", process.env.REPLICATE_API_KEY);
+    // ~ Loop in 1s intervals until the alt text is ready
     let finalResponse = await fetch(endpointUrl, {
       method: "GET",
       headers: {

@@ -90,10 +90,10 @@ const Home: NextPage = () => {
         >
           Want to support this project? Subscribe to{" "}
           <span className="font-semibold">my newsletter</span>.
-        </a>
+        </a> */}
         <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-900 sm:text-6xl mb-5">
           Restore any face photo
-        </h1> */}
+        </h1>
         <p className="text-slate-500">
           {" "}
           {/* //TODO */}

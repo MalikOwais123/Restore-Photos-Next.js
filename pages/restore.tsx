@@ -82,7 +82,7 @@ const Home: NextPage = () => {
 
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8">
-        <a
+        {/* <a
           href="https://nutlope.substack.com"
           target="_blank"
           rel="noreferrer"
@@ -93,12 +93,13 @@ const Home: NextPage = () => {
         </a>
         <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-900 sm:text-6xl mb-5">
           Restore any face photo
-        </h1>
+        </h1> */}
         <p className="text-slate-500">
           {" "}
+          {/* //TODO */}
           {/* Obtained this number from Vercel: based on how many serverless invocations happened. Can automate later */}
-          <CountUp start={30000} end={85092} duration={2} separator="," />{" "}
-          photos generated and counting.
+          {/* <CountUp start={30000} end={85092} duration={2} separator="," />{" "}
+          photos generated and counting. */}
         </p>
         <ResizablePanel>
           <AnimatePresence exitBeforeEnter>

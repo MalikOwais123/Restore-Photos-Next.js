@@ -27,7 +27,7 @@ const Home: NextPage = () => {
 
         <p className="mx-auto mt-12 max-w-xl text-lg text-slate-700 leading-7">
           Have old and blurry face photos? Let our AI restore them so those
-          memories can live on. 100% free – restore your photos today.
+          memories can live on. Now - restore your photos today.
         </p>
         <Link
           className="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"

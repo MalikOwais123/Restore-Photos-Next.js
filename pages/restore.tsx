@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import LoadingDots from "../components/LoadingDots";
 import ResizablePanel from "../components/ResizablePanel";
+import SquigglyLines from "../components/SquigglyLines";
 import Toggle from "../components/Toggle";
 import appendNewToName from "../utils/appendNewToName";
 import downloadPhoto from "../utils/downloadPhoto";
@@ -92,7 +93,11 @@ const Home: NextPage = () => {
           <span className="font-semibold">my newsletter</span>.
         </a> */}
         <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-900 sm:text-6xl mb-5">
-          Restore any face photo
+          Restore any &nbsp;
+          <span className="relative whitespace-nowrap text-[#EDB129]">
+            <SquigglyLines />
+            <span className="relative">face photo</span>
+          </span>
         </h1>
         <p className="text-slate-500">
           {" "}

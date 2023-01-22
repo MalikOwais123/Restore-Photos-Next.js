@@ -21,7 +21,8 @@ const Home: NextPage = () => {
           <span className="relative whitespace-nowrap text-[#EDB129]">
             <SquigglyLines />
             <span className="relative">using AI</span>
-          </span>{" "}
+            &nbsp;
+          </span>
           for everyone.
         </h1>
 

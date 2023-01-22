@@ -54,6 +54,8 @@ export default async function handler(
     }),
   });
 
+  console.log("REPLICATE_API_KEY", process.env.REPLICATE_API_KEY);
+
   let jsonStartResponse = await startResponse.json();
   let endpointUrl = jsonStartResponse.urls.get;
 
@@ -62,6 +64,7 @@ export default async function handler(
   while (!restoredImage) {
     // Loop in 1s intervals until the alt text is ready
     console.log("polling for result...");
+    console.log("process.env.REPLICATE_API_KEY", process.env.REPLICATE_API_KEY);
     let finalResponse = await fetch(endpointUrl, {
       method: "GET",
       headers: {
